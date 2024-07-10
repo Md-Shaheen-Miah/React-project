@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // এখানেই authentication চেক করা হবে
-    if (username === 'admin' && password === 'password') {
+    if (username === 'ad' && password === 'pass') {
       navigate('/admin-dashboard');
     } else {
       alert('Invalid credentials');
@@ -21,9 +21,9 @@ const Login = () => {
  
 
   return (
-    <div>
+    <div className='logoback'>
       <Navbar/>
-    <form onSubmit={handleSubmit} style={{fontFamily: 'sans-serif', backgroundColor:'#ffffff', margin:' 0', padding:' 0 ',display: 'flex', justifyContent: 'center', alignItems:' center', height:' 90vh'}}>
+    <form onSubmit={handleSubmit} style={{fontFamily: 'sans-serif',  margin:' 0', padding:' 0 ',display: 'flex', justifyContent: 'center', alignItems:' center',minHeight:"100vh"}}>
       <div className='logcontainer'>
         <h3 style={{textAlign:'center',color:'#ff7518'}}>Login</h3>
       <div>

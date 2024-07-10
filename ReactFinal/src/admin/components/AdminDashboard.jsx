@@ -106,7 +106,7 @@ const AdminDashboard = ({guests, onAction}) => {
         <div style={{width:'80%',marginLeft:'20%',minHeight:'100vh'}}>
         
         
-    <div style={{ padding: '20px' }}>
+    { <div style={{ padding: '20px' }}>
       <h1 style={{ textAlign: 'center' }}>Dashboard</h1>
       <div style={cardStyle}>
         <div style={card}>
@@ -154,7 +154,7 @@ const AdminDashboard = ({guests, onAction}) => {
        
       </div>
     </div>
-    
+     }
     
 
     

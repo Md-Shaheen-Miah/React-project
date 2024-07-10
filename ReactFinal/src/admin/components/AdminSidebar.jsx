@@ -60,8 +60,8 @@ const App = () => {
         <div>
           <div style={linkStyle} onClick={() => toggleDropdown(3)}>staff management</div>
           <div style={activeDropdown === 3 ? dropdownActiveStyle : dropdownStyle}>
-            <a href="#" style={linkStyle}>Link 1</a>
-            <a href="#" style={linkStyle}>Link 2</a>
+            <NavLink to="/Staff" style={linkStyle}>staff list</NavLink>
+            <NavLink to="/Add-staff" style={linkStyle}>add new staff</NavLink>
           </div>
         </div>
         <div>
