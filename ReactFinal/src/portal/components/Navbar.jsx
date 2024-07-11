@@ -10,7 +10,7 @@ function BasicExample() {
   return (
     
     <Navbar style={{backgroundColor:'#37474F',position:'fixed',marginTop:'0',width:'100%',zIndex:'100'}}>
-      <Container>
+      <Container >
               
         <NavLink style={{color:'#ffffff',textDecoration:'none'}}  to="/">PADMA HEIGHTS <br /><p style={{fontSize:'1rem',color:'#ff7518'}}>HOTEL and RESORT</p></NavLink>
              

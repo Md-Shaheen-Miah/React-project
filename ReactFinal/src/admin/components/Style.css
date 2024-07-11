@@ -13,8 +13,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #72647d;
+      background-color: #37474F;
       padding:3rem;
+      
     }
     
     .navbar-logo a {

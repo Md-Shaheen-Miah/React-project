@@ -26,6 +26,8 @@
     border-radius: 100%;
     
   }
+  
+ 
   /*navbar css end*/
 
 
@@ -35,7 +37,7 @@
 
 .footer {
     margin-top: 8px;
-      background-color: #003366;
+    background-color: #37474F;
       color: white;
       padding: 20px 0;
       text-align: center;

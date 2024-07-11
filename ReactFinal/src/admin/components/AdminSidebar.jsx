@@ -15,7 +15,7 @@ const App = () => {
     zIndex: '1',
     top: '0',
     left: '0',
-    backgroundColor: ' #72647d',
+    backgroundColor: '#37474F',
     padding: '10px 0',
   };
 
@@ -42,7 +42,7 @@ const App = () => {
   return (
     <div>
       <div style={sidebarStyle}>
-        <div><h2 style={{color:'#ffffff',marginLeft:'15px'}}>Dashboard</h2></div>
+        <div> <NavLink to='/admin-dashboard'><h2 style={{color:'#ffffff',marginLeft:'15px'}}>Dashboard</h2></NavLink></div>
         <div>
           <div style={linkStyle} onClick={() => toggleDropdown(1)}>room management</div>
           <div style={activeDropdown === 1 ? dropdownActiveStyle : dropdownStyle}>
