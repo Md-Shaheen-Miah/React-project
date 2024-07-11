@@ -12,6 +12,9 @@ import Booking from './portal/pages/Booking'
 import About from './portal/pages/About'
 import Contact from './portal/pages/Contact'
 import Staff from './admin/pages/Staff'
+import Gym from './portal/pages/Gym'
+import Details from './portal/pages/Details'
+import Staffform from './admin/pages/staffform'
 import AdminDashboard from './admin/components/AdminDashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminNavbar from './admin/components/AdminNavbar';
@@ -31,8 +34,11 @@ function App() {
         <Route path="/Booking" element={<Booking />} />
         <Route path="/About" element={<About />} /> 
         <Route path="/Contact" element={<Contact />} /> 
+        <Route path="/Gym" element={<Gym />} />
+        <Route path="/Details" element={<Details />} /> 
 
-        <Route path="/Staff" element={<Staff />} /> 
+        <Route path="/Staff" element={<Staff />} />
+        <Route path="/Staffform" element={<Staffform />} />  
 
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/adminNavbar" element={<AdminNavbar />} />

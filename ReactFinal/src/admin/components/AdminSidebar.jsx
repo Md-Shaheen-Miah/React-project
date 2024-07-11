@@ -61,7 +61,7 @@ const App = () => {
           <div style={linkStyle} onClick={() => toggleDropdown(3)}>staff management</div>
           <div style={activeDropdown === 3 ? dropdownActiveStyle : dropdownStyle}>
             <NavLink to="/Staff" style={linkStyle}>staff list</NavLink>
-            <NavLink to="/Add-staff" style={linkStyle}>add new staff</NavLink>
+            <NavLink to="/Staffform" style={linkStyle}>add new staff</NavLink>
           </div>
         </div>
         <div>

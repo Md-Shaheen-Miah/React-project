@@ -361,7 +361,7 @@ const Carousels = () => {
             <h5 className="mb-3">GYM &amp; Yoga</h5>
             <p className="text-body mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
             <div style={{marginTop:'20px'}}>
-           <NavLink style={{textDecoration:'none'}} to="">Click Me</NavLink>
+           <NavLink style={{textDecoration:'none'}} to="/Gym">Click Me</NavLink>
           </div>
           </a>
         </div>

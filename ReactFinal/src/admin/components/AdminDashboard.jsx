@@ -106,8 +106,8 @@ const AdminDashboard = ({guests, onAction}) => {
         <div style={{width:'80%',marginLeft:'20%',minHeight:'100vh'}}>
         
         
-    { <div style={{ padding: '20px' }}>
-      <h1 style={{ textAlign: 'center' }}>Dashboard</h1>
+    { <div style={{ padding: '20px'}}>
+      <h1 style={{ textAlign: 'center',marginTop:'100px' }}>Dashboard</h1>
       <div style={cardStyle}>
         <div style={card}>
           <h2>Total Revenue</h2>
