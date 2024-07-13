@@ -1,29 +1,37 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-$con = new mysqli('localhost', 'root', '', 'react-php');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 
-$name = $_POST['name'];
-$details = $_POST['details'];
-$id = $_POST['id'];
+$servername = "localhost";
+$username = "root"; 
+$password = "";
+$dbname = "react_project";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$target_dir = "images/";
-$target_file = $target_dir . basename($_FILES["photo"]["name"]);
-$img_name = $_FILES["photo"]["tmp_name"];
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
-    $photo = $_FILES["photo"]["name"];
-    $query = "update items set name='$name', photo='$photo', details='$details' where id=$id";
+$data = json_decode(file_get_contents("php://input"), true);
+
+$id = $data['id'];
+$name = $data['name'];
+$email = $data['email'];
+$phone = $data['phone'];
+$address = $data['address'];
+$position = $data['position'];
+$department = $data['department'];
+$salary = $data['salary'];
+
+$sql = "UPDATE staffs SET name='$name', email='$email', phone='$phone', address='$address', position='$position', department='$department', salary='$salary' WHERE id=$id";
+
+if ($conn->query($sql) === TRUE) {
+    echo json_encode(["message" => "Record updated successfully"]);
 } else {
-    $query = "update items set name='$name', details='$details' where id=$id";
+    echo json_encode(["message" => "Error updating record: " . $conn->error]);
 }
 
-if ($name != '') {
-    $con->query($query);
-    echo json_encode(['status'=>true]);
-}else{
-    echo json_encode(['status'=>false]);
-}
+$conn->close();
 ?>

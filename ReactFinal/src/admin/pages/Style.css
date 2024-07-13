@@ -14,11 +14,11 @@ body {
 }
   
   h1 {
-    font-size:3em; 
+    font-size:1em; 
     font-weight: 300;
     line-height:1em;
-    text-align: center;
-    color: #185875;
+    text-align: left;
+    color: #2d2c29;
   }
   
   h2 {
@@ -44,11 +44,13 @@ body {
   .contain th h1 {
       font-weight: bold;
       font-size: 1em;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
   }
   
   .contain td {
+    text-align: center;
+    color: #ffffff;
       font-weight: normal;
       font-size: 1em;
     -webkit-box-shadow: 0 2px 2px -2px #0E1119;
@@ -57,7 +59,7 @@ body {
   }
   
   .contain {
-      text-align: left;
+      text-align:left;
       overflow: hidden;
       width: 100%;
       margin: 0 auto;
@@ -94,25 +96,27 @@ body {
             box-shadow: 0 6px 6px -6px #0E1119;
   }
   
-  .contain td:hover {
-    background-color: #FFF842;
-    color: #403E10;
-    font-weight: bold;
-    
-    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
-    transform: translate3d(6px, -6px, 0);
-    
-    transition-delay: 0s;
-      transition-duration: 0.4s;
-      transition-property: all;
-    transition-timing-function: line;
-  }
+ 
   
   @media (max-width: 800px) {
   .contain td:nth-child(4),
   .contain th:nth-child(4) { display: none; }
 
 
+  }
+  .butt{
+    background-color: green;
+    width: 50px;
+    border-radius: 5%;
+    border: none;
+    color: #ffffff;
+  }
+  .butto{
+    background-color: red;
+    width: 50px;
+    border-radius: 5%;
+    border: none;
+    color: #ffffff;
   }
 
   /* staff table css end */

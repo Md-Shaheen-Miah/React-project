@@ -25,7 +25,7 @@ const StaffForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost/React-Final/React-project/Api-php/staff/insert.php', {
+    const response = await fetch('http://localhost/React-project/Api-php/staff/insert.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -48,7 +48,7 @@ const StaffForm = () => {
       <div style={{ width: '100%' }}>
         <div style={{ width: '20%', float: 'left' }}><AdminSidebar /></div>
         <div style={{ width: '80%', float: 'right' }}>
-          <div style={{ marginTop: '2%', minHeight: '100vh' }}>
+          <div style={{ marginTop: '10%', minHeight: '100vh' }}>
             <div className='boddy'>
               <div className="con">
                 <div className="title">Add Staff Form</div>
@@ -93,6 +93,7 @@ const StaffForm = () => {
              
             </div>
           </div>
+          <Footer/>
         </div>
       </div>
     </div>
