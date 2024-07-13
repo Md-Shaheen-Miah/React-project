@@ -31,7 +31,7 @@ return (
 
             <div style={{marginTop:'10%',minHeight:'100vh'}}>
          
-
+           
   <h2>Here are all the details of  <a href="https://github.com/pablorgarcia" target="_blank">the staff of this hotel </a></h2>
   <table className="contain">
     <thead>
@@ -42,7 +42,7 @@ return (
         <th><h1>Phone</h1></th>
         <th><h1>Address</h1></th>
         <th><h1>Position</h1></th>
-        <th><h1>Depertment</h1></th>
+        <th><h1>Department</h1></th>
         <th><h1>Salary</h1></th>
         <th><h1>Action</h1></th>
       </tr>

@@ -1,25 +1,41 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT');
-$con = new mysqli('localhost', 'root', '', 'react-php');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "react_project";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Get data from POST request
 $name = $_POST['name'];
-$details = $_POST['details'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$address = $_POST['address'];
+$position = $_POST['position'];
+$department = $_POST['department'];
+$salary = $_POST['salary'];
 
+// Prepare and bind
+$stmt = $conn->prepare("INSERT INTO staffs (name, email, phone, address, position, department, salary) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssss", $name, $email, $phone, $address, $position, $department, $salary);
 
-$target_dir = "images/";
-$target_file = $target_dir . basename($_FILES["photo"]["name"]);
-if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
-    $photo = $_FILES["photo"]["name"];
+// Execute the statement
+if ($stmt->execute()) {
+  echo "New record created successfully";
 } else {
-    $photo='';
+  echo "Error: " . $stmt->error;
 }
 
-$query = "insert into items(name,photo,details)values('$name','$photo','$details')";
-if ($name != '') {
-    $con->query($query);
-    echo json_encode(['status'=>true]);
-}else{
-    echo json_encode(['status'=>false]);
-}
+$stmt->close();
+$conn->close();
+?>
