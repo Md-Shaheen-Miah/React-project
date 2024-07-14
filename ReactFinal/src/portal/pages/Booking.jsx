@@ -26,8 +26,25 @@ const Booking = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
+
+    // Simple validation
+    if (!formData.name || !formData.email || !formData.phone || !formData.checkin || !formData.checkout || formData.adults < 1) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
+    const data = new FormData();
+    Object.keys(formData).forEach(key => {
+      data.append(key, formData[key]);
+    });
+
     try {
-      const response = await axios.post('http://localhost/React-Final/React-project/Api-php/booking/insert.php', formData);
+      const response = await axios.post('http://localhost/React-project/Api-php/booking/insert.php', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
       alert(response.data);
     } catch (error) {
       console.error('There was an error!', error);
@@ -62,16 +79,16 @@ const Booking = () => {
             <div className="col-lg-6">
               <div className="row g-3">
                 <div className="col-6 text-end">
-                  <img className="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style={{ marginTop: '25%' }} />
+                  <img className="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg" style={{ marginTop: '25%' }} alt="About" />
                 </div>
                 <div className="col-6 text-start">
-                  <img className="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" />
+                  <img className="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" alt="About" />
                 </div>
                 <div className="col-6 text-end">
-                  <img className="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg" />
+                  <img className="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg" alt="About" />
                 </div>
                 <div className="col-6 text-start">
-                  <img className="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg" />
+                  <img className="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg" alt="About" />
                 </div>
               </div>
             </div>
@@ -81,31 +98,33 @@ const Booking = () => {
                   <div className="row g-3">
                     <div className="col-md-6">
                       <div className="form-floating">
-                        <input type="text" className="form-control" id="name" placeholder="Your Name" name="name" value={formData.name} onChange={handleChange} />
+                        <input type="text" className="form-control" id="name" placeholder="Your Name" name="name" value={formData.name} onChange={handleChange} required />
                         <label htmlFor="name">Your Name</label>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating">
-                        <input type="email" className="form-control" id="email" placeholder="Your Email" name="email" value={formData.email} onChange={handleChange} />
+                        <input type="email" className="form-control" id="email" placeholder="Your Email" name="email" value={formData.email} onChange={handleChange} required />
                         <label htmlFor="email">Your Email</label>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating date" id="date3" data-target-input="nearest">
-                        <input type="text" className="form-control datetimepicker-input" id="checkin" placeholder="Check In" name="checkin" value={formData.checkin} onChange={handleChange} data-target="#date3" data-toggle="datetimepicker" />
+                        <input type="date" className="form-control datetimepicker-input" id="checkin" placeholder="Check In" name="checkin" value={formData.checkin} onChange={handleChange} required />
+                        
+
                         <label htmlFor="checkin">Check In</label>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating date" id="date4" data-target-input="nearest">
-                        <input type="text" className="form-control datetimepicker-input" id="checkout" placeholder="Check Out" name="checkout" value={formData.checkout} onChange={handleChange} data-target="#date4" data-toggle="datetimepicker" />
+                        <input type="date" className="form-control datetimepicker-input" id="checkout" placeholder="Check Out" name="checkout" value={formData.checkout} onChange={handleChange} required />
                         <label htmlFor="checkout">Check Out</label>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating">
-                        <select className="form-select" id="select1" name="adults" value={formData.adults} onChange={handleChange}>
+                        <select className="form-select" id="select1" name="adults" value={formData.adults} onChange={handleChange} required>
                           <option value={1}>Adult 1</option>
                           <option value={2}>Adult 2</option>
                           <option value={3}>Adult 3</option>
@@ -126,13 +145,13 @@ const Booking = () => {
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating">
-                        <input type="text" className="form-control" id="room_no" placeholder="Room No." name="room_no" value={formData.room_no} onChange={handleChange} />
+                        <input type="text" className="form-control" id="room_no" placeholder="Room No." name="room_no" value={formData.room_no} onChange={handleChange} required />
                         <label htmlFor="room_no">Room No.</label>
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="form-floating">
-                        <input type="text" className="form-control" id="phone" placeholder="Phone" name="phone" value={formData.phone} onChange={handleChange} />
+                        <input type="text" className="form-control" id="phone" placeholder="Phone" name="phone" value={formData.phone} onChange={handleChange} required />
                         <label htmlFor="phone">Phone</label>
                       </div>
                     </div>
@@ -160,10 +179,9 @@ const Booking = () => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
       <Footer />
     </div>
   );
 };
-
-export default Booking;
+export default Booking
