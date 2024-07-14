@@ -53,7 +53,7 @@ const App = () => {
         <div>
           <div style={linkStyle} onClick={() => toggleDropdown(2)}>guest management</div>
           <div style={activeDropdown === 2 ? dropdownActiveStyle : dropdownStyle}>
-            <NavLink style={linkStyle} to="">Total guest</NavLink>
+            <NavLink style={linkStyle} to="/Book">Total booking</NavLink>
             <NavLink style={linkStyle} to="">Add to guest</NavLink>
           </div>
         </div>

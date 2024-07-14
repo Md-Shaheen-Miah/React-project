@@ -25,7 +25,7 @@ const StaffForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost/React-project/Api-php/staff/insert.php', {
+    const response = await fetch('http://localhost/React-Final/React-project/Api-php/staff/insert.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

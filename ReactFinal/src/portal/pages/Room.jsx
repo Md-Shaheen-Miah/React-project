@@ -25,6 +25,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Junior Suite</h5>
+              <p style={{color:"#880808"}}>Room No:101</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
@@ -55,6 +56,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Executive Suite</h5>
+              <p style={{color:"#880808"}}>Room No:102</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
@@ -85,6 +87,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Super Deluxe</h5>
+              <p style={{color:"#880808"}}>Room No:103</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
@@ -115,6 +118,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Super Deluxe</h5>
+              <p style={{color:"#880808"}}>Room No:104</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
@@ -145,6 +149,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Junior Suite</h5>
+              <p style={{color:"#880808"}}>Room No:105</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
@@ -175,6 +180,7 @@ const Room = () => {
           <div className="p-4 mt-2">
             <div className="d-flex justify-content-between mb-3">
               <h5 className="mb-0">Executive Suite</h5>
+              <p style={{color:"#880808"}}>Room No:106</p>
               <div className="ps-2">
                 <small className="fa fa-star text-primary" />
                 <small className="fa fa-star text-primary" />
