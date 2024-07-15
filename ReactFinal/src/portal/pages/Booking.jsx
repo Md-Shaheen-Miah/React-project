@@ -40,7 +40,7 @@ const Booking = () => {
     });
 
     try {
-      const response = await axios.post('http://localhost/React-project/Api-php/booking/insert.php', data, {
+      const response = await axios.post('http://localhost/React-Final/React-project/Api-php/booking/insert.php', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
