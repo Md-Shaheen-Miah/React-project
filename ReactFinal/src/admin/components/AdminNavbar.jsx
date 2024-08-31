@@ -14,16 +14,16 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/bookings">Bookings</Link>
+          <Link to="/booking">Bookings</Link>
         </li>
         <li>
-          <Link to="/room">Rooms</Link>
+          <Link to="/Room">Rooms</Link>
         </li>
         <li>
-          <Link to="/customers">Customers</Link>
+          <Link to="/Book">Guest</Link>
         </li>
         <li>
-          <Link to="/staff">Staff</Link>
+          <Link to="/Staff">Staff</Link>
         </li>
         <li>
           <Link to="/reports">Reports</Link>

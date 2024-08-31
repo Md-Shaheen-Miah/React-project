@@ -24,7 +24,7 @@ const BookTable = () => {
     // Fetch data from backend
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost/React-Final/React-project/Api-php/booking/view.php');
+        const response = await fetch('http://localhost/React-project/Api-php/booking/view.php');
         const data = await response.json();
         setBookData(data);
       } catch (error) {
@@ -42,7 +42,7 @@ const BookTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch('http://localhost/React-Final/React-project/Api-php/booking/delete.php', {
+      const response = await fetch('http://localhost/React-project/Api-php/booking/delete.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const BookTable = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost/React-Final/React-project/Api-php/booking/edit.php', {
+      const response = await fetch('http://localhost/React-project/Api-php/booking/edit.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ return (
             <div style={{marginTop:'10%',minHeight:'100vh'}}>
          
            
-  <h2>Here are all the details of  <a href="https://github.com/pablorgarcia" target="_blank">the staff of this hotel </a></h2>
+  <h2>Here are all the booking of  <a href="https://github.com/pablorgarcia" target="_blank">the guest of this hotel </a></h2>
 
 
   {editingBook ? (
@@ -217,7 +217,7 @@ return (
       </tr>
     </thead>
     <tbody>
-    {bookData.map((bookings) => (
+    {bookData.map((bookings) =>(
                 <tr key={bookings.id}>
                   <td>{bookings.id}</td>
                   <td>{bookings.name}</td>

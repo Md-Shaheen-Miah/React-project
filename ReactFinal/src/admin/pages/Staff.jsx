@@ -23,7 +23,7 @@ const StaffTable = () => {
     // Fetch data from backend
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost/React-Final/React-project/Api-php/staff/view.php');
+        const response = await fetch('http://localhost/React-project/Api-php/staff/view.php');
         const data = await response.json();
         setStaffData(data);
       } catch (error) {
@@ -41,7 +41,7 @@ const StaffTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch('http://localhost/React-Final/React-project/Api-php/staff/delete.php', {
+      const response = await fetch('http://localhost/React-project/Api-php/staff/delete.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const StaffTable = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost/React-Final/React-project/Api-php/staff/edit.php', {
+      const response = await fetch('http://localhost/React-project/Api-php/staff/edit.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // এখানেই authentication চেক করা হবে
-    if (username === 'ad' && password === 'pass') {
+    if (username === 'a' && password === 'p') {
       navigate('/admin-dashboard');
     } else {
       alert('Invalid credentials');
