@@ -46,8 +46,8 @@ const App = () => {
         <div>
           <div style={linkStyle} onClick={() => toggleDropdown(1)}>room management</div>
           <div style={activeDropdown === 1 ? dropdownActiveStyle : dropdownStyle}>
-            <a href="#" style={linkStyle}>Link 1</a>
-            <a href="#" style={linkStyle}>Link 2</a>
+            <NavLink to="/AllRoom" style={linkStyle}>All Room</NavLink>
+            <NavLink to="/AddRoom" style={linkStyle}>Add Room</NavLink>
           </div>
         </div>
         <div>

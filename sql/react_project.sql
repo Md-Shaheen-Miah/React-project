@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2024 at 03:05 PM
+-- Generation Time: Sep 22, 2024 at 02:54 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -44,12 +44,8 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `name`, `email`, `phone`, `checkin`, `checkout`, `adults`, `children`, `room_no`) VALUES
-(22, 'iy7', 's@gmail.com', '2545', '2024-07-01 18:00:00', '2024-07-25 18:00:00', 2, 2, '455'),
-(23, 'iy7', 's@gmail.com', '2545', '2024-07-13 18:00:00', '2024-07-17 18:00:00', 2, 2, '455'),
-(24, 'raju', 'raju@gmail.com', '124578653', '2024-07-14 18:00:00', '2024-07-18 18:00:00', 2, 2, '102'),
-(25, 'sa', 's@gmail.com', '12455623', '2024-07-07 18:00:00', '2024-07-16 18:00:00', 2, 2, '4578'),
-(26, 'jamal', 'jamal@gmail.com', '12345678', '2024-07-15 18:00:00', '2024-07-21 18:00:00', 2, 1, '202'),
-(27, 'Rafiya khan', 'R@gmail.com', '2135254787897', '2024-07-15 18:00:00', '2024-07-17 18:00:00', 1, 1, '301');
+(31, 'Rakib', 'rakib@gmail.com', '01641160101', '2024-08-30 18:00:00', '2024-09-03 18:00:00', 2, 1, '100'),
+(32, 'jalal miah', 'jalal@gmail.com', '0172645845', '2024-09-22 18:00:00', '2024-09-24 18:00:00', 2, 1, '202');
 
 -- --------------------------------------------------------
 
@@ -73,7 +69,8 @@ CREATE TABLE `staffs` (
 --
 
 INSERT INTO `staffs` (`id`, `name`, `email`, `phone`, `address`, `position`, `department`, `salary`) VALUES
-(57, 'sakil', 'de@gmail.com', '4189', 'kjlg7', 'b', ' ftg', 214.00);
+(57, 'sakil', 'de@gmail.com', '4189', 'kjlg7', 'b', ' ftg', 214.00),
+(59, 'Thin miah', 'T@gmail.com', '1245788956', 'Dhanmondi', 'student', 'CSE', 42000.00);
 
 --
 -- Indexes for dumped tables
@@ -100,13 +97,13 @@ ALTER TABLE `staffs`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `staffs`
 --
 ALTER TABLE `staffs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

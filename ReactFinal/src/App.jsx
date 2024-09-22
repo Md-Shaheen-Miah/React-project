@@ -16,6 +16,8 @@ import Gym from './portal/pages/Gym'
 import Details from './portal/pages/Details'
 import Staffform from './admin/pages/staffform'
 import Book from './admin/pages/Book'
+import AllRoom from './admin/pages/AllRoom'
+import AddRoom from './admin/pages/AddRoom'
 import AdminDashboard from './admin/components/AdminDashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AdminNavbar from './admin/components/AdminNavbar';
@@ -41,6 +43,8 @@ function App() {
         <Route path="/Staff" element={<Staff />} />
         <Route path="/Staffform" element={<Staffform />} /> 
         <Route path="/Book" element={<Book />} />  
+        <Route path="/AllRoom" element={<AllRoom />} />
+        <Route path="/AddRoom" element={<AddRoom />} />
 
         <Route path="/admin-dashboard" element={<AdminDashboard />} />
         <Route path="/adminNavbar" element={<AdminNavbar />} />
